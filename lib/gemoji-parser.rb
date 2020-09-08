@@ -312,7 +312,8 @@ module EmojiParser
   end
 
   # Transforms all unicode emoji into token strings.
-  def tokenize(text)
+  def self.tokenize(text)
+    text = text.gsub(color_emoji_regex, '')
     parse_unicode(text) { |emoji| ":#{emoji.name}:" }
   end
 
@@ -341,6 +342,10 @@ module EmojiParser
 
   private
 
+  def self.color_emoji_regex
+    reg = /((?:\u{1f3fb}|\u{1f3fc}|\u{1f3fd}|\u{1f3fe}|\u{1f3ff}?))/
+  end
+  
   U_FE0F_SUFFIX = Regexp.new(Regexp.escape(U_FE0F)+'$')
 
   # Compiles an optimized unicode pattern for fast matching.
