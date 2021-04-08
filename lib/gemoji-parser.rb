@@ -127,6 +127,7 @@ module EmojiParser
       ["\u{1F962}", ":chopsticks:", "chopsticks"],
       ["\u{1F6F8}", ":flying-saucer:", "flying-saucer"],
       ["\u{1F6F7}", ":sled:", "sled"],
+      ["\u{1F970}", ":smiling_face_with_hearts:", "smiling-face-with-hearts"],
       ["\u{1F94C}", ":curling-stone:", "curling-stone"]
     ]
 
